@@ -226,10 +226,7 @@ function Header({ currentDate, onPrev, onNext, onExport, onImport }) {
     <div className="sticky top-0 z-30 bg-[#0f0f1a]/90 backdrop-blur-xl border-b border-slate-800/60">
       <div className="px-5 pt-4 pb-4">
         <div className="flex items-center justify-between">
-          <div>
-            <h1 className="text-xl font-bold text-white">Tài Chính</h1>
-            <p className="text-sm text-slate-500">Quản lý thu chi cá nhân</p>
-          </div>
+          
           <div className="flex items-center gap-2">
             <button onClick={onImport} className="p-2.5 text-slate-400 hover:text-emerald-400 transition-colors rounded-xl bg-slate-800/60 border border-slate-700/50 min-w-[44px] min-h-[44px] flex items-center justify-center" title="Nhập dữ liệu">
               <Upload className="w-5 h-5" />

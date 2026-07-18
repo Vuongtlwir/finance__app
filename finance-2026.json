@@ -1,0 +1,1014 @@
+{
+  "version": 1,
+  "exportDate": "2026-07-18T13:08:00.946Z",
+  "transactions": [
+    {
+      "id": "mrqdtu7m88d1b210",
+      "type": "expense",
+      "amount": 50000,
+      "category": "Giải trí",
+      "note": "đi chơi",
+      "date": "2026-01-01T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m38e03811",
+      "type": "expense",
+      "amount": 175000,
+      "category": "Giải trí",
+      "note": "đi chơi",
+      "date": "2026-01-02T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m313da112",
+      "type": "expense",
+      "amount": 445000,
+      "category": "Giải trí",
+      "note": "đi chơi",
+      "date": "2026-01-03T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m4e37cc13",
+      "type": "expense",
+      "amount": 8000,
+      "category": "Quà tặng",
+      "note": "tiền knm",
+      "date": "2026-01-05T12:00:00"
+    },
+    {
+      "id": "mrqdtu7mc693af14",
+      "type": "expense",
+      "amount": 54000,
+      "category": "Ăn uống",
+      "note": "kem đánh răng xà phòng",
+      "date": "2026-01-06T12:00:00"
+    },
+    {
+      "id": "mrqdtu7med7cdd15",
+      "type": "expense",
+      "amount": 50000,
+      "category": "Ăn uống",
+      "note": "ăn trưa ví Bông",
+      "date": "2026-01-07T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m053fce16",
+      "type": "expense",
+      "amount": 78000,
+      "category": "Ăn uống",
+      "note": "nước bim b",
+      "date": "2026-01-09T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m82d37717",
+      "type": "expense",
+      "amount": 30000,
+      "category": "Ăn uống",
+      "note": "ăn sáng",
+      "date": "2026-01-10T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m27368318",
+      "type": "expense",
+      "amount": 25000,
+      "category": "Ăn uống",
+      "note": "ăn sáng",
+      "date": "2026-01-11T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m66dac719",
+      "type": "expense",
+      "amount": 40000,
+      "category": "Ăn uống",
+      "note": "ăn trưa",
+      "date": "2026-01-13T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m6f8fc1110",
+      "type": "expense",
+      "amount": 82000,
+      "category": "Ăn uống",
+      "note": "ăn trưa",
+      "date": "2026-01-14T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m83dc3f111",
+      "type": "expense",
+      "amount": 87000,
+      "category": "Mua sắm",
+      "note": "bút xà phòng",
+      "date": "2026-01-15T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m841912112",
+      "type": "expense",
+      "amount": 12000,
+      "category": "Ăn uống",
+      "note": "ăn vặt",
+      "date": "2026-01-17T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m833c47113",
+      "type": "expense",
+      "amount": 60000,
+      "category": "Ăn uống",
+      "note": "cháo",
+      "date": "2026-01-18T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m959bc7114",
+      "type": "expense",
+      "amount": 22000,
+      "category": "Ăn uống",
+      "note": "nước",
+      "date": "2026-01-19T12:00:00"
+    },
+    {
+      "id": "mrqdtu7mece21a115",
+      "type": "expense",
+      "amount": 50000,
+      "category": "Ăn uống",
+      "note": "xăng",
+      "date": "2026-01-21T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m561899116",
+      "type": "expense",
+      "amount": 105000,
+      "category": "Ăn uống",
+      "note": "ăn",
+      "date": "2026-01-22T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m819ec6117",
+      "type": "expense",
+      "amount": 134000,
+      "category": "Giải trí",
+      "note": "đi chơi",
+      "date": "2026-01-23T12:00:00"
+    },
+    {
+      "id": "mrqdtu7maffb4e118",
+      "type": "expense",
+      "amount": 80000,
+      "category": "Tiện ích",
+      "note": "nạp đt",
+      "date": "2026-01-25T12:00:00"
+    },
+    {
+      "id": "mrqdtu7me349b0119",
+      "type": "expense",
+      "amount": 330000,
+      "category": "Giải trí",
+      "note": "đi chơi",
+      "date": "2026-01-26T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m235ca2120",
+      "type": "expense",
+      "amount": 150000,
+      "category": "Ăn uống",
+      "note": "thuốc",
+      "date": "2026-01-27T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m56b56a20",
+      "type": "expense",
+      "amount": 10000,
+      "category": "Giáo dục",
+      "note": "giấy a4",
+      "date": "2026-02-01T12:00:00"
+    },
+    {
+      "id": "mrqdtu7mfffa3521",
+      "type": "expense",
+      "amount": 6000,
+      "category": "Ăn uống",
+      "note": "nước",
+      "date": "2026-02-02T12:00:00"
+    },
+    {
+      "id": "mrqdtu7mbe353522",
+      "type": "expense",
+      "amount": 150000,
+      "category": "Di chuyển",
+      "note": "gửi xe",
+      "date": "2026-02-03T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m82418423",
+      "type": "expense",
+      "amount": 25000,
+      "category": "Ăn uống",
+      "note": "mì",
+      "date": "2026-02-05T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m730d0124",
+      "type": "expense",
+      "amount": 12000,
+      "category": "Ăn uống",
+      "note": "nước",
+      "date": "2026-02-06T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m17154725",
+      "type": "expense",
+      "amount": 60000,
+      "category": "Khác",
+      "note": "chà bá",
+      "date": "2026-02-08T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m95d06d26",
+      "type": "expense",
+      "amount": 50000,
+      "category": "Khác",
+      "note": "sửa đt bà",
+      "date": "2026-02-09T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m41c11a27",
+      "type": "expense",
+      "amount": 700000,
+      "category": "Giải trí",
+      "note": "đi chơi",
+      "date": "2026-02-11T12:00:00"
+    },
+    {
+      "id": "mrqdtu7mc0e4ca28",
+      "type": "expense",
+      "amount": 53000,
+      "category": "Mua sắm",
+      "note": "bông tẩy trang",
+      "date": "2026-02-12T12:00:00"
+    },
+    {
+      "id": "mrqdtu7mdb217c29",
+      "type": "expense",
+      "amount": 60000,
+      "category": "Ăn uống",
+      "note": "ốc",
+      "date": "2026-02-14T12:00:00"
+    },
+    {
+      "id": "mrqdtu7me066a0210",
+      "type": "expense",
+      "amount": 40000,
+      "category": "Mua sắm",
+      "note": "cắt tóc",
+      "date": "2026-02-15T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m427238211",
+      "type": "expense",
+      "amount": 40000,
+      "category": "Tiện ích",
+      "note": "nạp đt",
+      "date": "2026-02-17T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m4894bb212",
+      "type": "expense",
+      "amount": 80000,
+      "category": "Ăn uống",
+      "note": "giặt chăn",
+      "date": "2026-02-18T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m847f21213",
+      "type": "expense",
+      "amount": 71000,
+      "category": "Ăn uống",
+      "note": "bim bim nước",
+      "date": "2026-02-20T12:00:00"
+    },
+    {
+      "id": "mrqdtu7ma5974b214",
+      "type": "expense",
+      "amount": 200000,
+      "category": "Quà tặng",
+      "note": "tết",
+      "date": "2026-02-21T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m2f8bf0215",
+      "type": "expense",
+      "amount": 50000,
+      "category": "Ăn uống",
+      "note": "nước",
+      "date": "2026-02-23T12:00:00"
+    },
+    {
+      "id": "mrqdtu7mad93b3216",
+      "type": "expense",
+      "amount": 300000,
+      "category": "Giải trí",
+      "note": "đi chơi",
+      "date": "2026-02-24T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m457a76217",
+      "type": "expense",
+      "amount": 100000,
+      "category": "Di chuyển",
+      "note": "gửi xe trường",
+      "date": "2026-02-26T12:00:00"
+    },
+    {
+      "id": "mrqdtu7mb337cf218",
+      "type": "expense",
+      "amount": 25000,
+      "category": "Ăn uống",
+      "note": "ăn trưa",
+      "date": "2026-02-27T12:00:00"
+    },
+    {
+      "id": "mrqdtu7me730a830",
+      "type": "expense",
+      "amount": 20000,
+      "category": "Tiện ích",
+      "note": "nạp game",
+      "date": "2026-03-01T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m8dc27531",
+      "type": "expense",
+      "amount": 140000,
+      "category": "Khác",
+      "note": "ddvs",
+      "date": "2026-03-02T12:00:00"
+    },
+    {
+      "id": "mrqdtu7mb0f46c32",
+      "type": "expense",
+      "amount": 50000,
+      "category": "Ăn uống",
+      "note": "đổ xăng",
+      "date": "2026-03-03T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m7d202a33",
+      "type": "expense",
+      "amount": 568000,
+      "category": "Giải trí",
+      "note": "đi chơi",
+      "date": "2026-03-05T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m99d4af34",
+      "type": "expense",
+      "amount": 235000,
+      "category": "Ăn uống",
+      "note": "ăn với Bắc",
+      "date": "2026-03-06T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m22efbd35",
+      "type": "expense",
+      "amount": 85000,
+      "category": "Khác",
+      "note": ".8/3",
+      "date": "2026-03-07T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m0c4d4b36",
+      "type": "expense",
+      "amount": 115000,
+      "category": "Giải trí",
+      "note": "đi chơi",
+      "date": "2026-03-09T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m90865737",
+      "type": "expense",
+      "amount": 20000,
+      "category": "Tiện ích",
+      "note": "nạp game",
+      "date": "2026-03-10T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m22024c38",
+      "type": "expense",
+      "amount": 13000,
+      "category": "Ăn uống",
+      "note": "bánh bao",
+      "date": "2026-03-11T12:00:00"
+    },
+    {
+      "id": "mrqdtu7mab2ccb39",
+      "type": "expense",
+      "amount": 25000,
+      "category": "Ăn uống",
+      "note": "ăn trưa",
+      "date": "2026-03-13T12:00:00"
+    },
+    {
+      "id": "mrqdtu7ma6f156310",
+      "type": "expense",
+      "amount": 80000,
+      "category": "Tiện ích",
+      "note": "nạp đt",
+      "date": "2026-03-14T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m141394311",
+      "type": "expense",
+      "amount": 220000,
+      "category": "Giải trí",
+      "note": "đi chơi",
+      "date": "2026-03-15T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m393241312",
+      "type": "expense",
+      "amount": 622000,
+      "category": "Giải trí",
+      "note": "đi chơi",
+      "date": "2026-03-17T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m8f7cd5313",
+      "type": "expense",
+      "amount": 136000,
+      "category": "Khác",
+      "note": "\"áo mưa\"",
+      "date": "2026-03-18T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m097eca314",
+      "type": "expense",
+      "amount": 370000,
+      "category": "Giải trí",
+      "note": "đi chơi",
+      "date": "2026-03-19T12:00:00"
+    },
+    {
+      "id": "mrqdtu7mdea98c315",
+      "type": "expense",
+      "amount": 94000,
+      "category": "Ăn uống",
+      "note": "cháo sữa",
+      "date": "2026-03-21T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m30e9de316",
+      "type": "expense",
+      "amount": 74000,
+      "category": "Ăn uống",
+      "note": "thuốc",
+      "date": "2026-03-22T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m7b0ff1317",
+      "type": "expense",
+      "amount": 35000,
+      "category": "Ăn uống",
+      "note": "ăn trưa",
+      "date": "2026-03-23T12:00:00"
+    },
+    {
+      "id": "mrqdtu7ma567be318",
+      "type": "expense",
+      "amount": 560000,
+      "category": "Ăn uống",
+      "note": "thuốc",
+      "date": "2026-03-25T12:00:00"
+    },
+    {
+      "id": "mrqdtu7mb7ea62319",
+      "type": "expense",
+      "amount": 190000,
+      "category": "Giải trí",
+      "note": "đi chơi",
+      "date": "2026-03-26T12:00:00"
+    },
+    {
+      "id": "mrqdtu7mc10a5a320",
+      "type": "expense",
+      "amount": 229000,
+      "category": "Khác",
+      "note": "áo mưa",
+      "date": "2026-03-27T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m9184aa40",
+      "type": "expense",
+      "amount": 13000,
+      "category": "Ăn uống",
+      "note": "ăn sáng",
+      "date": "2026-04-01T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m84206f41",
+      "type": "expense",
+      "amount": 13000,
+      "category": "Ăn uống",
+      "note": "ăn sáng",
+      "date": "2026-04-03T12:00:00"
+    },
+    {
+      "id": "mrqdtu7mcbccef42",
+      "type": "expense",
+      "amount": 155000,
+      "category": "Giải trí",
+      "note": "đi chơi",
+      "date": "2026-04-05T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m87304843",
+      "type": "expense",
+      "amount": 35000,
+      "category": "Ăn uống",
+      "note": "ăn trưa",
+      "date": "2026-04-07T12:00:00"
+    },
+    {
+      "id": "mrqdtu7mac37cf44",
+      "type": "expense",
+      "amount": 40000,
+      "category": "Ăn uống",
+      "note": "đổ xăng",
+      "date": "2026-04-09T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m0cde6545",
+      "type": "expense",
+      "amount": 30000,
+      "category": "Ăn uống",
+      "note": "ăn trưa",
+      "date": "2026-04-11T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m43670346",
+      "type": "expense",
+      "amount": 190000,
+      "category": "Giải trí",
+      "note": "đi chơi",
+      "date": "2026-04-13T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m165e3847",
+      "type": "expense",
+      "amount": 29000,
+      "category": "Di chuyển",
+      "note": "bus",
+      "date": "2026-04-15T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m82084448",
+      "type": "expense",
+      "amount": 60000,
+      "category": "Tiện ích",
+      "note": "nạp đt",
+      "date": "2026-04-17T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m651c2e49",
+      "type": "expense",
+      "amount": 180000,
+      "category": "Giải trí",
+      "note": "đi chơi",
+      "date": "2026-04-19T12:00:00"
+    },
+    {
+      "id": "mrqdtu7mcaa1cd410",
+      "type": "expense",
+      "amount": 45000,
+      "category": "Mua sắm",
+      "note": "dao cạo",
+      "date": "2026-04-21T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m3ed7c4411",
+      "type": "expense",
+      "amount": 80000,
+      "category": "Ăn uống",
+      "note": "đổ xăng",
+      "date": "2026-04-23T12:00:00"
+    },
+    {
+      "id": "mrqdtu7med37e1412",
+      "type": "expense",
+      "amount": 647000,
+      "category": "Giải trí",
+      "note": "đi chơi",
+      "date": "2026-04-25T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m243ecd413",
+      "type": "expense",
+      "amount": 528000,
+      "category": "Di chuyển",
+      "note": "carave vitamin C",
+      "date": "2026-04-27T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m62600a50",
+      "type": "expense",
+      "amount": 11000,
+      "category": "Ăn uống",
+      "note": "ăn sáng",
+      "date": "2026-05-01T12:00:00"
+    },
+    {
+      "id": "mrqdtu7mfea8de51",
+      "type": "expense",
+      "amount": 60000,
+      "category": "Ăn uống",
+      "note": "đổ xăng",
+      "date": "2026-05-02T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m45780b52",
+      "type": "expense",
+      "amount": 70000,
+      "category": "Ăn uống",
+      "note": "kẹo",
+      "date": "2026-05-03T12:00:00"
+    },
+    {
+      "id": "mrqdtu7ma84d5c53",
+      "type": "expense",
+      "amount": 80000,
+      "category": "Tiện ích",
+      "note": "nạp đt",
+      "date": "2026-05-05T12:00:00"
+    },
+    {
+      "id": "mrqdtu7mab18d854",
+      "type": "expense",
+      "amount": 300000,
+      "category": "Di chuyển",
+      "note": "gửi xe",
+      "date": "2026-05-06T12:00:00"
+    },
+    {
+      "id": "mrqdtu7mdbac6055",
+      "type": "expense",
+      "amount": 219000,
+      "category": "Giải trí",
+      "note": "đi chơi",
+      "date": "2026-05-07T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m49f06056",
+      "type": "expense",
+      "amount": 14000,
+      "category": "Ăn uống",
+      "note": "ăn sáng",
+      "date": "2026-05-09T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m842c5157",
+      "type": "expense",
+      "amount": 35000,
+      "category": "Ăn uống",
+      "note": "nem",
+      "date": "2026-05-10T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m20d2ed58",
+      "type": "expense",
+      "amount": 73000,
+      "category": "Ăn uống",
+      "note": "phở cùng Bin",
+      "date": "2026-05-11T12:00:00"
+    },
+    {
+      "id": "mrqdtu7ma107c559",
+      "type": "expense",
+      "amount": 51000,
+      "category": "Ăn uống",
+      "note": "ăn vặt",
+      "date": "2026-05-13T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m522b0b510",
+      "type": "expense",
+      "amount": 100000,
+      "category": "Di chuyển",
+      "note": "gửi xe ở trường",
+      "date": "2026-05-14T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m169d69511",
+      "type": "expense",
+      "amount": 20000,
+      "category": "Ăn uống",
+      "note": "ăn sáng",
+      "date": "2026-05-15T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m8fa0d4512",
+      "type": "expense",
+      "amount": 46000,
+      "category": "Ăn uống",
+      "note": "ăn trưa",
+      "date": "2026-05-17T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m9efcff513",
+      "type": "expense",
+      "amount": 180000,
+      "category": "Tiện ích",
+      "note": "vps",
+      "date": "2026-05-18T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m68d81a514",
+      "type": "expense",
+      "amount": 20000,
+      "category": "Ăn uống",
+      "note": "ăn sáng",
+      "date": "2026-05-19T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m597f1d515",
+      "type": "expense",
+      "amount": 30000,
+      "category": "Ăn uống",
+      "note": "ăn trưa",
+      "date": "2026-05-21T12:00:00"
+    },
+    {
+      "id": "mrqdtu7ma9485e516",
+      "type": "expense",
+      "amount": 82000,
+      "category": "Ăn uống",
+      "note": "đổ xăng",
+      "date": "2026-05-22T12:00:00"
+    },
+    {
+      "id": "mrqdtu7mf17585517",
+      "type": "expense",
+      "amount": 40000,
+      "category": "Mua sắm",
+      "note": "cắt tóc",
+      "date": "2026-05-23T12:00:00"
+    },
+    {
+      "id": "mrqdtu7mc2bc99518",
+      "type": "expense",
+      "amount": 30000,
+      "category": "Ăn uống",
+      "note": "ăn trưa",
+      "date": "2026-05-25T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m295a8d519",
+      "type": "expense",
+      "amount": 50000,
+      "category": "Quà tặng",
+      "note": "bh4-bh5",
+      "date": "2026-05-26T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m9fddde520",
+      "type": "expense",
+      "amount": 7000,
+      "category": "Khác",
+      "note": "circle K",
+      "date": "2026-05-27T12:00:00"
+    },
+    {
+      "id": "mrqdtu7mca170660",
+      "type": "expense",
+      "amount": 40000,
+      "category": "Di chuyển",
+      "note": "xanh sm",
+      "date": "2026-06-01T12:00:00"
+    },
+    {
+      "id": "mrqdtu7mb9ea8161",
+      "type": "expense",
+      "amount": 105000,
+      "category": "Ăn uống",
+      "note": "mixue",
+      "date": "2026-06-02T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m5490f662",
+      "type": "expense",
+      "amount": 20000,
+      "category": "Ăn uống",
+      "note": "bánh mì",
+      "date": "2026-06-04T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m7d8d9b63",
+      "type": "expense",
+      "amount": 20000,
+      "category": "Ăn uống",
+      "note": "bánh mì",
+      "date": "2026-06-06T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m09548264",
+      "type": "expense",
+      "amount": 30000,
+      "category": "Ăn uống",
+      "note": "ăn trưa",
+      "date": "2026-06-08T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m6d53fb65",
+      "type": "expense",
+      "amount": 300000,
+      "category": "Di chuyển",
+      "note": "gửi xe",
+      "date": "2026-06-10T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m56d69e66",
+      "type": "expense",
+      "amount": 55000,
+      "category": "Ăn uống",
+      "note": "kem",
+      "date": "2026-06-12T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m5c67d067",
+      "type": "expense",
+      "amount": 20000,
+      "category": "Ăn uống",
+      "note": "kem",
+      "date": "2026-06-14T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m824bb668",
+      "type": "expense",
+      "amount": 35000,
+      "category": "Ăn uống",
+      "note": "nem",
+      "date": "2026-06-15T12:00:00"
+    },
+    {
+      "id": "mrqdtu7mf18e5069",
+      "type": "expense",
+      "amount": 113000,
+      "category": "Ăn uống",
+      "note": "mixue",
+      "date": "2026-06-17T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m7cb7e4610",
+      "type": "expense",
+      "amount": 21000,
+      "category": "Ăn uống",
+      "note": "bò húc",
+      "date": "2026-06-19T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m71bacd611",
+      "type": "expense",
+      "amount": 22000,
+      "category": "Ăn uống",
+      "note": "ăn sáng",
+      "date": "2026-06-21T12:00:00"
+    },
+    {
+      "id": "mrqdtu7me97947612",
+      "type": "expense",
+      "amount": 60000,
+      "category": "Ăn uống",
+      "note": "ăn trưa",
+      "date": "2026-06-23T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m9dc491613",
+      "type": "expense",
+      "amount": 30000,
+      "category": "Ăn uống",
+      "note": "ăn trưa",
+      "date": "2026-06-25T12:00:00"
+    },
+    {
+      "id": "mrqdtu7me1be33614",
+      "type": "expense",
+      "amount": 35000,
+      "category": "Ăn uống",
+      "note": "ăn trưa",
+      "date": "2026-06-27T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m3a7ff670",
+      "type": "expense",
+      "amount": 35000,
+      "category": "Ăn uống",
+      "note": "ăn trưa",
+      "date": "2026-07-01T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m11efc571",
+      "type": "expense",
+      "amount": 150000,
+      "category": "Di chuyển",
+      "note": "gửi xe",
+      "date": "2026-07-02T12:00:00"
+    },
+    {
+      "id": "mrqdtu7mb0d88672",
+      "type": "expense",
+      "amount": 15000,
+      "category": "Ăn uống",
+      "note": "cafe",
+      "date": "2026-07-04T12:00:00"
+    },
+    {
+      "id": "mrqdtu7mc621b173",
+      "type": "expense",
+      "amount": 35000,
+      "category": "Giáo dục",
+      "note": "tài liệu",
+      "date": "2026-07-06T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m5e2e2474",
+      "type": "expense",
+      "amount": 40000,
+      "category": "Ăn uống",
+      "note": "ăn trưa",
+      "date": "2026-07-08T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m86bddf75",
+      "type": "expense",
+      "amount": 40000,
+      "category": "Ăn uống",
+      "note": "ăn trưa",
+      "date": "2026-07-10T12:00:00"
+    },
+    {
+      "id": "mrqdtu7me7b1d176",
+      "type": "expense",
+      "amount": 60000,
+      "category": "Ăn uống",
+      "note": "ăn tối",
+      "date": "2026-07-12T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m5b2e3377",
+      "type": "expense",
+      "amount": 80000,
+      "category": "Tiện ích",
+      "note": "nạp đt",
+      "date": "2026-07-14T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m4a889f78",
+      "type": "expense",
+      "amount": 15000,
+      "category": "Ăn uống",
+      "note": "cafe",
+      "date": "2026-07-15T12:00:00"
+    },
+    {
+      "id": "mrqdtu7mf6389f79",
+      "type": "expense",
+      "amount": 40000,
+      "category": "Ăn uống",
+      "note": "ăn trưa",
+      "date": "2026-07-17T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m6cdc05710",
+      "type": "expense",
+      "amount": 12000,
+      "category": "Ăn uống",
+      "note": "nước",
+      "date": "2026-07-19T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m39b3aa711",
+      "type": "expense",
+      "amount": 20000,
+      "category": "Ăn uống",
+      "note": "ăn trưa",
+      "date": "2026-07-21T12:00:00"
+    },
+    {
+      "id": "mrqdtu7m5f774c712",
+      "type": "expense",
+      "amount": 70000,
+      "category": "Ăn uống",
+      "note": "ăn vặt +mixue sinh nhật",
+      "date": "2026-07-23T12:00:00"
+    },
+    {
+      "id": "mrqdtu7md1a1d1713",
+      "type": "expense",
+      "amount": 18000,
+      "category": "Ăn uống",
+      "note": "thuốc",
+      "date": "2026-07-25T12:00:00"
+    },
+    {
+      "id": "mrqdtu7mab0837714",
+      "type": "expense",
+      "amount": 50000,
+      "category": "Ăn uống",
+      "note": "bánh",
+      "date": "2026-07-27T12:00:00"
+    }
+  ]
+}
