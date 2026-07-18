@@ -89,30 +89,30 @@ function App() {
 
       <SummaryCards summary={summary} />
 
-      <div className="flex-1 px-4 pb-6">
+      <div className="flex-1 px-5 pb-8">
         <Tabs activeTab={activeTab} setActiveTab={setActiveTab} />
 
-        <div className="flex gap-2 mt-3 mb-3">
+        <div className="flex gap-3 mt-4 mb-4">
           <div className="flex-1 relative">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-500" />
             <input
               type="text"
               placeholder="Tìm kiếm..."
               value={searchQuery}
               onChange={e => setSearchQuery(e.target.value)}
-              className="w-full bg-slate-800/60 border border-slate-700/50 rounded-xl pl-9 pr-3 py-2.5 text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:border-indigo-500/50"
+              className="w-full bg-slate-800/60 border border-slate-700/50 rounded-xl pl-12 pr-4 py-3.5 text-base text-slate-200 placeholder-slate-500 focus:outline-none focus:border-indigo-500/50"
             />
             {searchQuery && (
-              <button onClick={() => setSearchQuery('')} className="absolute right-3 top-1/2 -translate-y-1/2">
-                <XCircle className="w-4 h-4 text-slate-500" />
+              <button onClick={() => setSearchQuery('')} className="absolute right-4 top-1/2 -translate-y-1/2 p-1">
+                <XCircle className="w-5 h-5 text-slate-500" />
               </button>
             )}
           </div>
           <button
             onClick={() => setChartView(chartView === 'daily' ? 'category' : 'daily')}
-            className="bg-slate-800/60 border border-slate-700/50 rounded-xl px-3 py-2.5 text-slate-400 hover:text-indigo-400 transition-colors"
+            className="bg-slate-800/60 border border-slate-700/50 rounded-xl px-4 py-3.5 text-slate-400 hover:text-indigo-400 transition-colors shrink-0"
           >
-            {chartView === 'daily' ? <BarChart3 className="w-5 h-5" /> : <PieChart className="w-5 h-5" />}
+            {chartView === 'daily' ? <BarChart3 className="w-6 h-6" /> : <PieChart className="w-6 h-6" />}
           </button>
         </div>
 
@@ -133,9 +133,9 @@ function App() {
 
       <button
         onClick={() => { setEditTx(null); setShowForm(true); }}
-        className="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 text-white shadow-lg shadow-indigo-500/30 flex items-center justify-center active:scale-90 transition-transform"
+        className="fixed bottom-8 right-5 z-40 w-16 h-16 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 text-white shadow-lg shadow-indigo-500/30 flex items-center justify-center active:scale-90 transition-transform"
       >
-        <Plus className="w-6 h-6" />
+        <Plus className="w-7 h-7" />
       </button>
 
       {showForm && (
@@ -153,21 +153,21 @@ function App() {
 function Header({ currentDate, onPrev, onNext }) {
   return (
     <div className="sticky top-0 z-30 bg-[#0f0f1a]/90 backdrop-blur-xl border-b border-slate-800/60">
-      <div className="px-4 pt-3 pb-3">
+      <div className="px-5 pt-4 pb-4">
         <div className="flex items-center justify-between">
           <div>
-            <h1 className="text-lg font-bold text-white">Tài Chính</h1>
-            <p className="text-xs text-slate-500">Quản lý thu chi cá nhân</p>
+            <h1 className="text-xl font-bold text-white">Tài Chính</h1>
+            <p className="text-sm text-slate-500">Quản lý thu chi cá nhân</p>
           </div>
           <div className="flex items-center gap-1 bg-slate-800/60 rounded-xl border border-slate-700/50 p-1">
-            <button onClick={onPrev} className="p-1.5 text-slate-400 hover:text-white transition-colors rounded-lg">
-              <ChevronLeft className="w-4 h-4" />
+            <button onClick={onPrev} className="p-2.5 text-slate-400 hover:text-white transition-colors rounded-lg min-w-[44px] min-h-[44px] flex items-center justify-center">
+              <ChevronLeft className="w-5 h-5" />
             </button>
-            <span className="px-2 text-sm font-semibold text-white min-w-[100px] text-center">
+            <span className="px-3 text-base font-semibold text-white min-w-[110px] text-center">
               {format(currentDate, 'MM/yyyy', { locale: vi })}
             </span>
-            <button onClick={onNext} className="p-1.5 text-slate-400 hover:text-white transition-colors rounded-lg">
-              <ChevronRight className="w-4 h-4" />
+            <button onClick={onNext} className="p-2.5 text-slate-400 hover:text-white transition-colors rounded-lg min-w-[44px] min-h-[44px] flex items-center justify-center">
+              <ChevronRight className="w-5 h-5" />
             </button>
           </div>
         </div>
@@ -178,35 +178,35 @@ function Header({ currentDate, onPrev, onNext }) {
 
 function SummaryCards({ summary }) {
   return (
-    <div className="px-4 py-4 grid grid-cols-3 gap-3">
-      <div className="bg-gradient-to-br from-emerald-500/20 to-emerald-600/10 border border-emerald-500/20 rounded-2xl p-3">
-        <div className="flex items-center gap-1.5 mb-1.5">
-          <div className="w-6 h-6 rounded-lg bg-emerald-500/20 flex items-center justify-center">
-            <ArrowDownRight className="w-3.5 h-3.5 text-emerald-400" />
+    <div className="px-5 py-5 grid grid-cols-3 gap-3">
+      <div className="bg-gradient-to-br from-emerald-500/20 to-emerald-600/10 border border-emerald-500/20 rounded-2xl p-4">
+        <div className="flex items-center gap-2 mb-2">
+          <div className="w-8 h-8 rounded-xl bg-emerald-500/20 flex items-center justify-center">
+            <ArrowDownRight className="w-4 h-4 text-emerald-400" />
           </div>
-          <span className="text-[10px] font-medium text-emerald-400/80 uppercase tracking-wide">Thu</span>
+          <span className="text-xs font-medium text-emerald-400/80 uppercase tracking-wide">Thu</span>
         </div>
-        <p className="text-sm font-bold text-emerald-300">{formatCurrency(summary.income)}</p>
+        <p className="text-sm font-bold text-emerald-300 leading-tight">{formatCurrency(summary.income)}</p>
       </div>
 
-      <div className="bg-gradient-to-br from-rose-500/20 to-rose-600/10 border border-rose-500/20 rounded-2xl p-3">
-        <div className="flex items-center gap-1.5 mb-1.5">
-          <div className="w-6 h-6 rounded-lg bg-rose-500/20 flex items-center justify-center">
-            <ArrowUpRight className="w-3.5 h-3.5 text-rose-400" />
+      <div className="bg-gradient-to-br from-rose-500/20 to-rose-600/10 border border-rose-500/20 rounded-2xl p-4">
+        <div className="flex items-center gap-2 mb-2">
+          <div className="w-8 h-8 rounded-xl bg-rose-500/20 flex items-center justify-center">
+            <ArrowUpRight className="w-4 h-4 text-rose-400" />
           </div>
-          <span className="text-[10px] font-medium text-rose-400/80 uppercase tracking-wide">Chi</span>
+          <span className="text-xs font-medium text-rose-400/80 uppercase tracking-wide">Chi</span>
         </div>
-        <p className="text-sm font-bold text-rose-300">{formatCurrency(summary.expense)}</p>
+        <p className="text-sm font-bold text-rose-300 leading-tight">{formatCurrency(summary.expense)}</p>
       </div>
 
-      <div className={`bg-gradient-to-br ${summary.balance >= 0 ? 'from-indigo-500/20 to-indigo-600/10 border-indigo-500/20' : 'from-amber-500/20 to-amber-600/10 border-amber-500/20'} border rounded-2xl p-3`}>
-        <div className="flex items-center gap-1.5 mb-1.5">
-          <div className={`w-6 h-6 rounded-lg ${summary.balance >= 0 ? 'bg-indigo-500/20' : 'bg-amber-500/20'} flex items-center justify-center`}>
-            <Wallet className={`w-3.5 h-3.5 ${summary.balance >= 0 ? 'text-indigo-400' : 'text-amber-400'}`} />
+      <div className={`bg-gradient-to-br ${summary.balance >= 0 ? 'from-indigo-500/20 to-indigo-600/10 border-indigo-500/20' : 'from-amber-500/20 to-amber-600/10 border-amber-500/20'} border rounded-2xl p-4`}>
+        <div className="flex items-center gap-2 mb-2">
+          <div className={`w-8 h-8 rounded-xl ${summary.balance >= 0 ? 'bg-indigo-500/20' : 'bg-amber-500/20'} flex items-center justify-center`}>
+            <Wallet className={`w-4 h-4 ${summary.balance >= 0 ? 'text-indigo-400' : 'text-amber-400'}`} />
           </div>
-          <span className={`text-[10px] font-medium ${summary.balance >= 0 ? 'text-indigo-400/80' : 'text-amber-400/80'} uppercase tracking-wide`}>Dư</span>
+          <span className={`text-xs font-medium ${summary.balance >= 0 ? 'text-indigo-400/80' : 'text-amber-400/80'} uppercase tracking-wide`}>Dư</span>
         </div>
-        <p className={`text-sm font-bold ${summary.balance >= 0 ? 'text-indigo-300' : 'text-amber-300'}`}>{formatCurrency(summary.balance)}</p>
+        <p className={`text-sm font-bold leading-tight ${summary.balance >= 0 ? 'text-indigo-300' : 'text-amber-300'}`}>{formatCurrency(summary.balance)}</p>
       </div>
     </div>
   );
@@ -214,30 +214,30 @@ function SummaryCards({ summary }) {
 
 function Tabs({ activeTab, setActiveTab }) {
   return (
-    <div className="flex bg-slate-800/40 rounded-xl p-1 border border-slate-700/30">
+    <div className="flex bg-slate-800/40 rounded-xl p-1.5 border border-slate-700/30">
       <button
         onClick={() => setActiveTab('income')}
-        className={`flex-1 py-2.5 rounded-lg text-sm font-semibold transition-all ${
+        className={`flex-1 py-3.5 rounded-lg text-base font-semibold transition-all min-h-[48px] ${
           activeTab === 'income'
             ? 'bg-gradient-to-r from-emerald-500 to-emerald-600 text-white shadow-lg shadow-emerald-500/25'
             : 'text-slate-400 hover:text-slate-200'
         }`}
       >
-        <span className="flex items-center justify-center gap-1.5">
-          <TrendingUp className="w-4 h-4" />
+        <span className="flex items-center justify-center gap-2">
+          <TrendingUp className="w-5 h-5" />
           Thu nhập
         </span>
       </button>
       <button
         onClick={() => setActiveTab('expense')}
-        className={`flex-1 py-2.5 rounded-lg text-sm font-semibold transition-all ${
+        className={`flex-1 py-3.5 rounded-lg text-base font-semibold transition-all min-h-[48px] ${
           activeTab === 'expense'
             ? 'bg-gradient-to-r from-rose-500 to-rose-600 text-white shadow-lg shadow-rose-500/25'
             : 'text-slate-400 hover:text-slate-200'
         }`}
       >
-        <span className="flex items-center justify-center gap-1.5">
-          <TrendingDown className="w-4 h-4" />
+        <span className="flex items-center justify-center gap-2">
+          <TrendingDown className="w-5 h-5" />
           Chi tiêu
         </span>
       </button>
@@ -319,39 +319,39 @@ function TransactionList({ transactions, onEdit, onDelete, type }) {
 
   if (transactions.length === 0) {
     return (
-      <div className="text-center py-12">
-        <div className={`w-16 h-16 mx-auto rounded-2xl flex items-center justify-center mb-4 ${type === 'income' ? 'bg-emerald-500/10' : 'bg-rose-500/10'}`}>
+      <div className="text-center py-16">
+        <div className={`w-20 h-20 mx-auto rounded-2xl flex items-center justify-center mb-5 ${type === 'income' ? 'bg-emerald-500/10' : 'bg-rose-500/10'}`}>
           {type === 'income'
-            ? <TrendingUp className="w-8 h-8 text-emerald-500/40" />
-            : <TrendingDown className="w-8 h-8 text-rose-500/40" />
+            ? <TrendingUp className="w-10 h-10 text-emerald-500/40" />
+            : <TrendingDown className="w-10 h-10 text-rose-500/40" />
           }
         </div>
-        <p className="text-sm text-slate-500">Chưa có giao dịch nào</p>
-        <p className="text-xs text-slate-600 mt-1">Nhấn + để thêm giao dịch mới</p>
+        <p className="text-base text-slate-500">Chưa có giao dịch nào</p>
+        <p className="text-sm text-slate-600 mt-2">Nhấn + để thêm giao dịch mới</p>
       </div>
     );
   }
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-5">
       {Object.entries(grouped).map(([date, txs]) => (
         <div key={date}>
-          <div className="flex items-center gap-2 mb-2">
-            <Calendar className="w-3.5 h-3.5 text-slate-500" />
-            <span className="text-xs font-semibold text-slate-400">
+          <div className="flex items-center gap-2 mb-3">
+            <Calendar className="w-4 h-4 text-slate-500" />
+            <span className="text-sm font-semibold text-slate-400">
               {format(new Date(date + 'T00:00:00'), 'EEEE, dd/MM', { locale: vi })}
             </span>
           </div>
-          <div className="space-y-2">
+          <div className="space-y-3">
             {txs.map(tx => (
               <div
                 key={tx.id}
-                className="bg-slate-800/40 border border-slate-700/30 rounded-xl p-3 flex items-center gap-3 active:scale-[0.98] transition-transform"
+                className="bg-slate-800/40 border border-slate-700/30 rounded-2xl p-4 flex items-center gap-4 active:scale-[0.98] transition-transform"
               >
-                <div className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${
+                <div className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 ${
                   type === 'income' ? 'bg-emerald-500/15' : 'bg-rose-500/15'
                 }`}>
-                  <span className="text-lg">
+                  <span className="text-xl">
                     {tx.category === 'Ăn uống' ? '🍜' :
                      tx.category === 'Di chuyển' ? '🚗' :
                      tx.category === 'Mua sắm' ? '🛒' :
@@ -366,21 +366,21 @@ function TransactionList({ transactions, onEdit, onDelete, type }) {
                   </span>
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="text-sm font-medium text-slate-200 truncate">{tx.note || tx.category}</p>
-                  <p className="text-[10px] text-slate-500">
+                  <p className="text-base font-medium text-slate-200 truncate">{tx.note || tx.category}</p>
+                  <p className="text-xs text-slate-500 mt-0.5">
                     {tx.category} · {format(new Date(tx.date), 'HH:mm')}
                   </p>
                 </div>
                 <div className="text-right shrink-0">
-                  <p className={`text-sm font-bold ${type === 'income' ? 'text-emerald-400' : 'text-rose-400'}`}>
+                  <p className={`text-base font-bold ${type === 'income' ? 'text-emerald-400' : 'text-rose-400'}`}>
                     {type === 'income' ? '+' : '-'}{formatCurrency(tx.amount)}
                   </p>
-                  <div className="flex gap-1 mt-1 justify-end">
-                    <button onClick={() => onEdit(tx)} className="p-1 text-slate-500 hover:text-indigo-400 transition-colors">
-                      <Edit3 className="w-3 h-3" />
+                  <div className="flex gap-1 mt-2 justify-end">
+                    <button onClick={() => onEdit(tx)} className="p-2 text-slate-500 hover:text-indigo-400 transition-colors min-w-[36px] min-h-[36px] flex items-center justify-center">
+                      <Edit3 className="w-4 h-4" />
                     </button>
-                    <button onClick={() => onDelete(tx.id)} className="p-1 text-slate-500 hover:text-rose-400 transition-colors">
-                      <Trash2 className="w-3 h-3" />
+                    <button onClick={() => onDelete(tx.id)} className="p-2 text-slate-500 hover:text-rose-400 transition-colors min-w-[36px] min-h-[36px] flex items-center justify-center">
+                      <Trash2 className="w-4 h-4" />
                     </button>
                   </div>
                 </div>
@@ -425,20 +425,20 @@ function TransactionForm({ type, editTx, onSave, onClose }) {
   return (
     <div className="fixed inset-0 z-50 flex items-end justify-center">
       <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={onClose} />
-      <div className="relative w-full max-w-lg bg-[#1a1a2e] border-t border-slate-700/50 rounded-t-3xl max-h-[85dvh] overflow-auto">
-        <div className="sticky top-0 bg-[#1a1a2e] z-10 px-5 pt-4 pb-3 border-b border-slate-700/30">
+      <div className="relative w-full max-w-lg bg-[#1a1a2e] border-t border-slate-700/50 rounded-t-3xl max-h-[90dvh] overflow-auto">
+        <div className="sticky top-0 bg-[#1a1a2e] z-10 px-6 pt-5 pb-4 border-b border-slate-700/30">
           <div className="flex items-center justify-between">
-            <h2 className="text-base font-bold text-white">
+            <h2 className="text-lg font-bold text-white">
               {editTx ? 'Sửa giao dịch' : 'Thêm giao dịch'}
             </h2>
-            <button onClick={onClose} className="p-1 text-slate-400 hover:text-white">
-              <X className="w-5 h-5" />
+            <button onClick={onClose} className="p-2 text-slate-400 hover:text-white min-w-[44px] min-h-[44px] flex items-center justify-center">
+              <X className="w-6 h-6" />
             </button>
           </div>
-          <div className="flex mt-3 bg-slate-800/60 rounded-lg p-0.5">
+          <div className="flex mt-4 bg-slate-800/60 rounded-lg p-1">
             <button
               onClick={() => setFormData(p => ({ ...p, type: 'income', category: '' }))}
-              className={`flex-1 py-2 rounded-md text-xs font-semibold transition-all ${
+              className={`flex-1 py-3 rounded-md text-sm font-semibold transition-all min-h-[44px] ${
                 formData.type === 'income' ? 'bg-emerald-500 text-white' : 'text-slate-400'
               }`}
             >
@@ -446,7 +446,7 @@ function TransactionForm({ type, editTx, onSave, onClose }) {
             </button>
             <button
               onClick={() => setFormData(p => ({ ...p, type: 'expense', category: '' }))}
-              className={`flex-1 py-2 rounded-md text-xs font-semibold transition-all ${
+              className={`flex-1 py-3 rounded-md text-sm font-semibold transition-all min-h-[44px] ${
                 formData.type === 'expense' ? 'bg-rose-500 text-white' : 'text-slate-400'
               }`}
             >
@@ -455,49 +455,49 @@ function TransactionForm({ type, editTx, onSave, onClose }) {
           </div>
         </div>
 
-        <form onSubmit={handleSubmit} className="px-5 py-4 space-y-4">
+        <form onSubmit={handleSubmit} className="px-6 py-5 space-y-5">
           <div>
-            <label className="text-xs font-medium text-slate-400 mb-1.5 block">Số tiền (VND)</label>
+            <label className="text-sm font-medium text-slate-400 mb-2 block">Số tiền (VND)</label>
             <input
               type="text"
               inputMode="numeric"
               placeholder="0"
               value={formData.amount ? Number(formData.amount).toLocaleString('vi-VN') : ''}
               onChange={e => formatAmountInput(e.target.value)}
-              className="w-full bg-slate-800/60 border border-slate-700/50 rounded-xl px-4 py-3.5 text-2xl font-bold text-white placeholder-slate-600 focus:outline-none focus:border-indigo-500/50 text-center"
+              className="w-full bg-slate-800/60 border border-slate-700/50 rounded-xl px-5 py-4 text-3xl font-bold text-white placeholder-slate-600 focus:outline-none focus:border-indigo-500/50 text-center"
             />
           </div>
 
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-2 gap-4">
             <div>
-              <label className="text-xs font-medium text-slate-400 mb-1.5 block">Ngày</label>
+              <label className="text-sm font-medium text-slate-400 mb-2 block">Ngày</label>
               <input
                 type="date"
                 value={formData.date}
                 onChange={e => setFormData(p => ({ ...p, date: e.target.value }))}
-                className="w-full bg-slate-800/60 border border-slate-700/50 rounded-xl px-3 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500/50 [color-scheme:dark]"
+                className="w-full bg-slate-800/60 border border-slate-700/50 rounded-xl px-4 py-3.5 text-base text-white focus:outline-none focus:border-indigo-500/50 [color-scheme:dark]"
               />
             </div>
             <div>
-              <label className="text-xs font-medium text-slate-400 mb-1.5 block">Giờ</label>
+              <label className="text-sm font-medium text-slate-400 mb-2 block">Giờ</label>
               <input
                 type="time"
                 value={formData.time}
                 onChange={e => setFormData(p => ({ ...p, time: e.target.value }))}
-                className="w-full bg-slate-800/60 border border-slate-700/50 rounded-xl px-3 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500/50 [color-scheme:dark]"
+                className="w-full bg-slate-800/60 border border-slate-700/50 rounded-xl px-4 py-3.5 text-base text-white focus:outline-none focus:border-indigo-500/50 [color-scheme:dark]"
               />
             </div>
           </div>
 
           <div>
-            <label className="text-xs font-medium text-slate-400 mb-2 block">Danh mục</label>
-            <div className="flex flex-wrap gap-2">
+            <label className="text-sm font-medium text-slate-400 mb-3 block">Danh mục</label>
+            <div className="flex flex-wrap gap-2.5">
               {categories.map(cat => (
                 <button
                   key={cat}
                   type="button"
                   onClick={() => setFormData(p => ({ ...p, category: cat }))}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
+                  className={`px-4 py-2.5 rounded-xl text-sm font-medium transition-all min-h-[42px] ${
                     formData.category === cat
                       ? formData.type === 'income'
                         ? 'bg-emerald-500 text-white shadow-lg shadow-emerald-500/25'
@@ -512,20 +512,20 @@ function TransactionForm({ type, editTx, onSave, onClose }) {
           </div>
 
           <div>
-            <label className="text-xs font-medium text-slate-400 mb-1.5 block">Ghi chú</label>
+            <label className="text-sm font-medium text-slate-400 mb-2 block">Ghi chú</label>
             <input
               type="text"
               placeholder="Nhập nội dung giao dịch..."
               value={formData.note}
               onChange={e => setFormData(p => ({ ...p, note: e.target.value }))}
-              className="w-full bg-slate-800/60 border border-slate-700/50 rounded-xl px-4 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500/50"
+              className="w-full bg-slate-800/60 border border-slate-700/50 rounded-xl px-5 py-3.5 text-base text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500/50"
             />
           </div>
 
           <button
             type="submit"
             disabled={!isValid}
-            className={`w-full py-3.5 rounded-xl text-sm font-bold transition-all ${
+            className={`w-full py-4 rounded-xl text-base font-bold transition-all min-h-[52px] ${
               isValid
                 ? formData.type === 'income'
                   ? 'bg-gradient-to-r from-emerald-500 to-emerald-600 text-white shadow-lg shadow-emerald-500/25 active:scale-[0.98]'
