@@ -4,14 +4,16 @@ import { vi } from 'date-fns/locale';
 import {
   TrendingUp, TrendingDown, Wallet, Plus, X, Trash2, Edit3,
   ChevronLeft, ChevronRight, PieChart, BarChart3, Calendar,
-  ArrowUpRight, ArrowDownRight, Search, Filter, XCircle
+  ArrowUpRight, ArrowDownRight, Search, Filter, XCircle,
+  Download, Upload, CheckCircle2, AlertTriangle
 } from 'lucide-react';
 import {
   BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell, PieChart as RePieChart, Pie
 } from 'recharts';
 import {
-  getTransactions, addTransaction, updateTransaction, deleteTransaction,
-  formatCurrency, getMonthTransactions, getMonthSummary, getTotalBalance, getDailySummary, getCategorySummary
+  getTransactions, addTransaction, updateTransaction, deleteTransaction, saveTransactions,
+  formatCurrency, getMonthTransactions, getMonthSummary, getTotalBalance, getDailySummary, getCategorySummary,
+  exportToJSON, importFromJSON
 } from './utils/storage';
 
 const CATEGORIES = {
@@ -29,6 +31,9 @@ function App() {
   const [editTx, setEditTx] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [chartView, setChartView] = useState('daily');
+  const [showImportModal, setShowImportModal] = useState(false);
+  const [importData, setImportData] = useState(null);
+  const [importMsg, setImportMsg] = useState(null);
 
   const year = currentDate.getFullYear();
   const month = currentDate.getMonth();
@@ -81,12 +86,53 @@ function App() {
     setShowForm(true);
   };
 
+  const handleExport = () => {
+    exportToJSON(transactions);
+  };
+
+  const handleImportClick = () => {
+    const input = document.createElement('input');
+    input.type = 'file';
+    input.accept = '.json';
+    input.onchange = async (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+      try {
+        const data = await importFromJSON(file);
+        setImportData(data);
+        setShowImportModal(true);
+      } catch (err) {
+        setImportMsg({ type: 'error', text: err.message });
+        setTimeout(() => setImportMsg(null), 3000);
+      }
+    };
+    input.click();
+  };
+
+  const handleImportConfirm = (mode) => {
+    if (mode === 'replace') {
+      saveTransactions(importData);
+    } else {
+      const existing = getTransactions();
+      const existingIds = new Set(existing.map(t => t.id));
+      const newTx = importData.filter(t => !existingIds.has(t.id));
+      saveTransactions([...existing, ...newTx]);
+    }
+    refresh();
+    setShowImportModal(false);
+    setImportData(null);
+    setImportMsg({ type: 'success', text: 'Nhập dữ liệu thành công!' });
+    setTimeout(() => setImportMsg(null), 3000);
+  };
+
   return (
     <div className="min-h-dvh flex flex-col bg-[#0f0f1a]">
       <Header
         currentDate={currentDate}
         onPrev={() => setCurrentDate(subMonths(currentDate, 1))}
         onNext={() => setCurrentDate(addMonths(currentDate, 1))}
+        onExport={handleExport}
+        onImport={handleImportClick}
       />
 
       <SummaryCards summary={summary} />
@@ -148,11 +194,34 @@ function App() {
           onClose={() => { setShowForm(false); setEditTx(null); }}
         />
       )}
+
+      {importMsg && (
+        <div className={`fixed top-4 left-4 right-4 z-[60] flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium shadow-lg ${
+          importMsg.type === 'success'
+            ? 'bg-emerald-500/90 text-white'
+            : 'bg-rose-500/90 text-white'
+        }`}>
+          {importMsg.type === 'success'
+            ? <CheckCircle2 className="w-5 h-5 shrink-0" />
+            : <AlertTriangle className="w-5 h-5 shrink-0" />
+          }
+          {importMsg.text}
+        </div>
+      )}
+
+      {showImportModal && (
+        <ImportModal
+          count={importData?.length || 0}
+          onReplace={() => handleImportConfirm('replace')}
+          onMerge={() => handleImportConfirm('merge')}
+          onClose={() => { setShowImportModal(false); setImportData(null); }}
+        />
+      )}
     </div>
   );
 }
 
-function Header({ currentDate, onPrev, onNext }) {
+function Header({ currentDate, onPrev, onNext, onExport, onImport }) {
   return (
     <div className="sticky top-0 z-30 bg-[#0f0f1a]/90 backdrop-blur-xl border-b border-slate-800/60">
       <div className="px-5 pt-4 pb-4">
@@ -161,16 +230,24 @@ function Header({ currentDate, onPrev, onNext }) {
             <h1 className="text-xl font-bold text-white">Tài Chính</h1>
             <p className="text-sm text-slate-500">Quản lý thu chi cá nhân</p>
           </div>
-          <div className="flex items-center gap-1 bg-slate-800/60 rounded-xl border border-slate-700/50 p-1">
-            <button onClick={onPrev} className="p-2.5 text-slate-400 hover:text-white transition-colors rounded-lg min-w-[44px] min-h-[44px] flex items-center justify-center">
-              <ChevronLeft className="w-5 h-5" />
+          <div className="flex items-center gap-2">
+            <button onClick={onImport} className="p-2.5 text-slate-400 hover:text-emerald-400 transition-colors rounded-xl bg-slate-800/60 border border-slate-700/50 min-w-[44px] min-h-[44px] flex items-center justify-center" title="Nhập dữ liệu">
+              <Upload className="w-5 h-5" />
             </button>
-            <span className="px-3 text-base font-semibold text-white min-w-[110px] text-center">
-              {format(currentDate, 'MM/yyyy', { locale: vi })}
-            </span>
-            <button onClick={onNext} className="p-2.5 text-slate-400 hover:text-white transition-colors rounded-lg min-w-[44px] min-h-[44px] flex items-center justify-center">
-              <ChevronRight className="w-5 h-5" />
+            <button onClick={onExport} className="p-2.5 text-slate-400 hover:text-indigo-400 transition-colors rounded-xl bg-slate-800/60 border border-slate-700/50 min-w-[44px] min-h-[44px] flex items-center justify-center" title="Xuất dữ liệu">
+              <Download className="w-5 h-5" />
             </button>
+            <div className="flex items-center gap-1 bg-slate-800/60 rounded-xl border border-slate-700/50 p-1">
+              <button onClick={onPrev} className="p-2.5 text-slate-400 hover:text-white transition-colors rounded-lg min-w-[44px] min-h-[44px] flex items-center justify-center">
+                <ChevronLeft className="w-5 h-5" />
+              </button>
+              <span className="px-3 text-base font-semibold text-white min-w-[110px] text-center">
+                {format(currentDate, 'MM/yyyy', { locale: vi })}
+              </span>
+              <button onClick={onNext} className="p-2.5 text-slate-400 hover:text-white transition-colors rounded-lg min-w-[44px] min-h-[44px] flex items-center justify-center">
+                <ChevronRight className="w-5 h-5" />
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -538,6 +615,44 @@ function TransactionForm({ type, editTx, onSave, onClose }) {
             {editTx ? 'Cập nhật' : 'Thêm giao dịch'}
           </button>
         </form>
+      </div>
+    </div>
+  );
+}
+
+function ImportModal({ count, onReplace, onMerge, onClose }) {
+  return (
+    <div className="fixed inset-0 z-[70] flex items-center justify-center px-5">
+      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={onClose} />
+      <div className="relative w-full max-w-sm bg-[#1a1a2e] border border-slate-700/50 rounded-2xl p-6 shadow-2xl">
+        <div className="text-center mb-5">
+          <div className="w-14 h-14 mx-auto rounded-2xl bg-indigo-500/15 flex items-center justify-center mb-4">
+            <Upload className="w-7 h-7 text-indigo-400" />
+          </div>
+          <h3 className="text-lg font-bold text-white mb-1">Nhập dữ liệu</h3>
+          <p className="text-sm text-slate-400">Tìm thấy <span className="text-white font-semibold">{count}</span> giao dịch trong file</p>
+        </div>
+
+        <div className="space-y-3">
+          <button
+            onClick={onMerge}
+            className="w-full py-3.5 rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 text-white font-bold text-base shadow-lg shadow-emerald-500/25 active:scale-[0.98] transition-transform"
+          >
+            Ghép vào dữ liệu hiện tại
+          </button>
+          <button
+            onClick={onReplace}
+            className="w-full py-3.5 rounded-xl bg-rose-500/20 border border-rose-500/30 text-rose-300 font-bold text-base active:scale-[0.98] transition-transform"
+          >
+            Thay thế toàn bộ
+          </button>
+          <button
+            onClick={onClose}
+            className="w-full py-3 rounded-xl bg-slate-800/60 text-slate-400 font-medium text-sm active:scale-[0.98] transition-transform"
+          >
+            Hủy
+          </button>
+        </div>
       </div>
     </div>
   );

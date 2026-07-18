@@ -87,3 +87,39 @@ export function getCategorySummary(transactions, year, month, type) {
     .map(([name, value]) => ({ name, value }))
     .sort((a, b) => b.value - a.value);
 }
+
+export function exportToJSON(transactions) {
+  const data = {
+    version: 1,
+    exportDate: new Date().toISOString(),
+    transactions,
+  };
+  const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  const date = new Date().toISOString().slice(0, 10);
+  a.href = url;
+  a.download = `finance-backup-${date}.json`;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+export function importFromJSON(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      try {
+        const data = JSON.parse(e.target.result);
+        if (!data.transactions || !Array.isArray(data.transactions)) {
+          reject(new Error('File không hợp lệ'));
+          return;
+        }
+        resolve(data.transactions);
+      } catch {
+        reject(new Error('File không hợp lệ'));
+      }
+    };
+    reader.onerror = () => reject(new Error('Không đọc được file'));
+    reader.readAsText(file);
+  });
+}
