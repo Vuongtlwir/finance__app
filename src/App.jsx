@@ -11,7 +11,7 @@ import {
 } from 'recharts';
 import {
   getTransactions, addTransaction, updateTransaction, deleteTransaction,
-  formatCurrency, getMonthTransactions, getMonthSummary, getDailySummary, getCategorySummary
+  formatCurrency, getMonthTransactions, getMonthSummary, getTotalBalance, getDailySummary, getCategorySummary
 } from './utils/storage';
 
 const CATEGORIES = {
@@ -42,7 +42,9 @@ function App() {
   }, []);
 
   const monthTx = getMonthTransactions(transactions, year, month);
-  const summary = getMonthSummary(transactions, year, month);
+  const income = monthTx.filter(t => t.type === 'income').reduce((s, t) => s + t.amount, 0);
+  const expense = monthTx.filter(t => t.type === 'expense').reduce((s, t) => s + t.amount, 0);
+  const summary = { income, expense, balance: getTotalBalance(transactions) };
   const dailyData = getDailySummary(transactions, year, month);
   const incomeCategories = getCategorySummary(transactions, year, month, 'income');
   const expenseCategories = getCategorySummary(transactions, year, month, 'expense');

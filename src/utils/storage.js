@@ -54,6 +54,12 @@ export function getMonthSummary(transactions, year, month) {
   return { income, expense, balance: income - expense };
 }
 
+export function getTotalBalance(transactions) {
+  const totalIncome = transactions.filter(t => t.type === 'income').reduce((s, t) => s + t.amount, 0);
+  const totalExpense = transactions.filter(t => t.type === 'expense').reduce((s, t) => s + t.amount, 0);
+  return totalIncome - totalExpense;
+}
+
 export function getDailySummary(transactions, year, month) {
   const monthTx = getMonthTransactions(transactions, year, month);
   const daysInMonth = new Date(year, month + 1, 0).getDate();
